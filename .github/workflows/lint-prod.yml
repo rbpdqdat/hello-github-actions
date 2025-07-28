@@ -1,0 +1,33 @@
+name: CICD Production Merge
+
+on:
+  pull_request:
+    branches: [ prod ]
+  workflow_dispatch:
+
+jobs:
+  
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Check for Python files
+        run: |
+          if ! find . -type f -name "*.py" | wc -l; then
+            echo "No Python files found in the repository."
+            exit 0
+          else
+            echo "There are python files. Go forth and scan!"
+          fi
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install flake8 pylint
+
+      - name: Run Pylint
+        run: |
+          flake8 --ignore=E501,E231 *.py *test*.py
+          pylint --errors-only --disable=C0301 --disable=C0326 .

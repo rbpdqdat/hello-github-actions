@@ -1,4 +1,4 @@
-305name: CICD Production Merge
+name: CICD Production Merge
 
 on:
   pull_request:

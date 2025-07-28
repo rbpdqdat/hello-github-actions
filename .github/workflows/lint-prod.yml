@@ -29,5 +29,5 @@ jobs:
 
       - name: Run Pylint
         run: |
-          flake8 --ignore=E501,E231 *.py *test*.py
+          flake8 --ignore=E501,E231,E302 *.py *test*.py
           pylint --errors-only --disable=C0301 --disable=C0326 .

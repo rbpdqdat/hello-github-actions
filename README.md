@@ -7,6 +7,11 @@
 
 ### 🌟 You've successfully completed the exercise! 🌟
 
+
+It's not difficult if you stick to it.
+
+[![](https://img.shields.io/badge/Go%20to%20Exercise-%E2%86%92-1f883d?style=for-the-badge&logo=github&labelColor=197935)](https://github.com/rbpdqdat/hello-github-actions/issues/1)
+
 ## 🚀 Share Your Success!
 
 **Show off your new skills and inspire others!**
@@ -30,6 +35,7 @@
 *There's no better way to learn than building things!* 🚀
 
 </div>
+
 
 ---
 
